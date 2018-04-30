@@ -16,6 +16,10 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.layer.cornerRadius = 5
+        passwordTextField.layer.cornerRadius = 5
+        
+        
     }
     //MARK:- Other Methods
     
@@ -44,11 +48,36 @@ class LoginViewController: UIViewController {
                 
             })
             
+        } else {
+            
+            alertUser(title: "Email And Password Are Required", message: "Please, enter your Email and Password in the text fields")
+            
         }
     }
     
-    @IBAction func sugnUpButtonPressed(_ sender: UIButton) {
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+        
+            UsersAuthorizationManager.authManager.signUp(email: emailTextField.text!, password: passwordTextField.text!, loginHandler: {message in
+                
+                if message != nil {
+                    //Message is not nil, so there is an error. Unable to register.
+                    self.alertUser(title: "Problem With Creating A New User", message: message!)
+                    
+                } else {
+                    //Registration is successful
+                    
+                    
+                }
+                
+            })
+            
+        } else {
+            
+            alertUser(title: "Email And Password Are Required", message: "Please, enter your Email and Password in the text fields")
+            
+        }
     }
-    
 }
 

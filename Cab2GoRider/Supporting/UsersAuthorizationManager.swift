@@ -22,6 +22,7 @@ struct LoginErrorCodeMessage {
 
 class UsersAuthorizationManager {
     
+    //Creating a singleton for this class
     private static let instance = UsersAuthorizationManager()
     
     static var authManager: UsersAuthorizationManager {
@@ -30,7 +31,27 @@ class UsersAuthorizationManager {
         
     }
     
-    func login(email email: String, password: String, loginHandler: LoginHandler?) {
+    func signUp(email: String, password: String, loginHandler: LoginHandler?) {
+        
+        Auth.auth().createUser(withEmail: email, password: password, completion: {(user, error) in
+            
+            if error != nil {
+                self.handleErrors(error: error! as NSError, loginHandler: loginHandler)
+            } else {
+                
+                if user?.uid != nil {
+                    
+                    self.login(email: email, password: password, loginHandler: loginHandler)
+                }
+                
+            }
+            
+            
+        })
+        
+    }
+    
+    func login(email: String, password: String, loginHandler: LoginHandler?) {
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { user, error in
             
