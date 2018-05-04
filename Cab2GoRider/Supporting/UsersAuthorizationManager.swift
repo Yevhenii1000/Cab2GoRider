@@ -41,6 +41,8 @@ class UsersAuthorizationManager {
                 
                 if user?.uid != nil {
                     
+                    DatabaseManager.defaultManager.saveUser(withID: (user?.uid)!, email: email, password: password)
+                    
                     self.login(email: email, password: password, loginHandler: loginHandler)
                 }
                 
@@ -69,6 +71,22 @@ class UsersAuthorizationManager {
             
         })
         
+    }
+    
+    func logOut() -> Bool {
+        
+        if Auth.auth().currentUser != nil {
+            
+            do {
+               try Auth.auth().signOut()
+                return true
+            }
+            catch {
+                return false
+            }
+            
+        }
+        return true
     }
     
     private func handleErrors(error: NSError, loginHandler: LoginHandler?) {

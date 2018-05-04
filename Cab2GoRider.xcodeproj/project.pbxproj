@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		57111AF62088C821009BE764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57111AF52088C821009BE764 /* GoogleService-Info.plist */; };
+		5729BC4E209B325D00F801CE /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729BC4D209B325D00F801CE /* DataBaseManager.swift */; };
+		5729BC50209B395400F801CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729BC4F209B395400F801CE /* Constants.swift */; };
 		57615782208CCD97000D566F /* UsersAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57615781208CCD97000D566F /* UsersAuthorizationManager.swift */; };
 		576F652F2087BDE900650D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F652E2087BDE900650D66 /* AppDelegate.swift */; };
 		576F65312087BDE900650D66 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576F65302087BDE900650D66 /* LoginViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		57111AF52088C821009BE764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5729BC4D209B325D00F801CE /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
+		5729BC4F209B395400F801CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57615781208CCD97000D566F /* UsersAuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAuthorizationManager.swift; sourceTree = "<group>"; };
 		576F652B2087BDE900650D66 /* Cab2GoRider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cab2GoRider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		576F652E2087BDE900650D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				57615781208CCD97000D566F /* UsersAuthorizationManager.swift */,
+				5729BC4D209B325D00F801CE /* DataBaseManager.swift */,
+				5729BC4F209B395400F801CE /* Constants.swift */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -94,7 +100,6 @@
 				57111AF32088C7DE009BE764 /* View */,
 				576F65452087C85F00650D66 /* Controller */,
 				57111AF42088C7E8009BE764 /* Model */,
-				576F65402087BE5B00650D66 /* MapViewController.swift */,
 				576F65322087BDE900650D66 /* Main.storyboard */,
 				576F65352087BDEA00650D66 /* Assets.xcassets */,
 				576F65372087BDEA00650D66 /* LaunchScreen.storyboard */,
@@ -108,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				576F65302087BDE900650D66 /* LoginViewController.swift */,
+				576F65402087BE5B00650D66 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -252,6 +258,8 @@
 				576F65312087BDE900650D66 /* LoginViewController.swift in Sources */,
 				576F65412087BE5B00650D66 /* MapViewController.swift in Sources */,
 				576F652F2087BDE900650D66 /* AppDelegate.swift in Sources */,
+				5729BC4E209B325D00F801CE /* DataBaseManager.swift in Sources */,
+				5729BC50209B395400F801CE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

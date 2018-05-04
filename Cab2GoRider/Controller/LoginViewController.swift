@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    private let mapVCSegueIdentifier = "ShowMapVC"
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -42,7 +44,7 @@ class LoginViewController: UIViewController {
                     
                 } else {
                     
-                    print("Login Completed")
+                    self.performSegue(withIdentifier: self.mapVCSegueIdentifier, sender: nil)
                     
                 }
                 
@@ -66,8 +68,8 @@ class LoginViewController: UIViewController {
                     self.alertUser(title: "Problem With Creating A New User", message: message!)
                     
                 } else {
-                    //Registration is successful
                     
+                    self.performSegue(withIdentifier: self.mapVCSegueIdentifier, sender: nil)
                     
                 }
                 

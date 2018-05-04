@@ -204,6 +204,9 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="YN3-Gp-7pc"/>
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="Uwx-ee-Xhe">
                             <color key="tintColor" red="0.77119685910000002" green="0.3258329761" blue="0.3374258765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="K3A-QG-23h" id="06Z-C9-4iu"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
