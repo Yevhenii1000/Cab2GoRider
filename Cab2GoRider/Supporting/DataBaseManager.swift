@@ -29,8 +29,13 @@ class DatabaseManager {
     }
     
     //Request reference
-    
+    var cabRequestReference: DatabaseReference {
+        return databaseReference.child(Constants.cabRequest)
+    }
     //Request accepted reference
+    var cabRequestAcceptedReference: DatabaseReference {
+        return databaseReference.child(Constants.cabAccepted)
+    }
     
     func saveUser(withID id: String, email: String, password: String) {
         let dataDictionary: [String:Any] = [Constants.email:email, Constants.password:password, Constants.isRider:true]

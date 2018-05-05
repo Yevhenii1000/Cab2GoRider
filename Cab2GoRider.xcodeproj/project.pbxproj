@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		57111AF62088C821009BE764 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57111AF52088C821009BE764 /* GoogleService-Info.plist */; };
+		57167C1B209CA7A200D3F726 /* CabUnitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57167C1A209CA7A200D3F726 /* CabUnitManager.swift */; };
 		5729BC4E209B325D00F801CE /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729BC4D209B325D00F801CE /* DataBaseManager.swift */; };
 		5729BC50209B395400F801CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5729BC4F209B395400F801CE /* Constants.swift */; };
 		57615782208CCD97000D566F /* UsersAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57615781208CCD97000D566F /* UsersAuthorizationManager.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		57111AF52088C821009BE764 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		57167C1A209CA7A200D3F726 /* CabUnitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabUnitManager.swift; sourceTree = "<group>"; };
 		5729BC4D209B325D00F801CE /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
 		5729BC4F209B395400F801CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		57615781208CCD97000D566F /* UsersAuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAuthorizationManager.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				57615781208CCD97000D566F /* UsersAuthorizationManager.swift */,
 				5729BC4D209B325D00F801CE /* DataBaseManager.swift */,
+				57167C1A209CA7A200D3F726 /* CabUnitManager.swift */,
 				5729BC4F209B395400F801CE /* Constants.swift */,
 			);
 			path = Supporting;
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57167C1B209CA7A200D3F726 /* CabUnitManager.swift in Sources */,
 				57615782208CCD97000D566F /* UsersAuthorizationManager.swift in Sources */,
 				576F65312087BDE900650D66 /* LoginViewController.swift in Sources */,
 				576F65412087BE5B00650D66 /* MapViewController.swift in Sources */,

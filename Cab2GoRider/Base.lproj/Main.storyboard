@@ -175,7 +175,7 @@
                                     <constraint firstItem="vCI-Tb-8Dh" firstAttribute="centerX" secondItem="KWd-51-VVU" secondAttribute="centerX" id="iIl-ui-B5j"/>
                                 </constraints>
                             </view>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-bi-929">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmj-bi-929">
                                 <rect key="frame" x="5" y="74" width="365" height="525"/>
                             </mapView>
                         </subviews>

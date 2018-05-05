@@ -23,7 +23,6 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        mapView.showsUserLocation = true
         mapView.delegate = self
         mapView.layer.cornerRadius = 20
         
@@ -65,6 +64,13 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func findACabButtonPressed(_ sender: UIButton) {
+        if ridersLocation != nil {
+            
+            CabUnitManager.defaultManager.requestCab(latitude: Double((ridersLocation?.latitude)!), longitude: Double((ridersLocation?.longitude)!))
+            
+        } else {
+            alertUser(title: "Cab Requesting Error", message: "Cannot determine your current location")
+        }
     }
     
 }
@@ -72,7 +78,13 @@ class MapViewController: UIViewController {
 extension MapViewController: MKMapViewDelegate, CLLocationManagerDelegate {
     
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        
+        if let coordinate = locationManager.location?.coordinate {
+            
+            ridersLocation = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            let region = MKCoordinateRegion(center: ridersLocation!,
+                                            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            mapView.setRegion(region, animated: true)
+        }
     }
     
 }
