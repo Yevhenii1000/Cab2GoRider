@@ -115,8 +115,8 @@
 		576F65452087C85F00650D66 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				576F65302087BDE900650D66 /* LoginViewController.swift */,
 				576F65402087BE5B00650D66 /* MapViewController.swift */,
+				576F65302087BDE900650D66 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

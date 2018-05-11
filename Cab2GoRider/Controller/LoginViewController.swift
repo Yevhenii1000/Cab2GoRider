@@ -73,6 +73,10 @@ class LoginViewController: UIViewController {
                     
                 } else {
                     
+                    CabUnitManager.defaultManager.rider = self.emailTextField.text!
+                    self.emailTextField.text = ""
+                    self.passwordTextField.text = ""
+                    
                     self.performSegue(withIdentifier: self.mapVCSegueIdentifier, sender: nil)
                     
                 }
